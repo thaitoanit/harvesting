@@ -40,8 +40,7 @@ module Harvesting
 
     # @return [Harvesting::Models::Company]
     def company
-      Harvesting::Models::User.new(get("users/me"), client: self)
-      # Harvesting::Models::Company.new(get("company"), client: self)
+      Harvesting::Models::Company.new(get("company"), client: self)
     end
 
     # @return [Array<Harvesting::Models::Contact>]

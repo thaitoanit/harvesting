@@ -7,6 +7,7 @@ require "harvesting/models/harvest_record"
 require "harvesting/models/harvest_record_collection"
 # harvest records
 require "harvesting/models/client"
+require "harvesting/models/company"
 require "harvesting/models/user"
 require "harvesting/models/project"
 require "harvesting/models/task"
