@@ -5,7 +5,6 @@ module Harvesting
     # For more information: https://help.getharvest.com/api-v2/expenses-api/expenses/expenses/
     class Expense < HarvestRecord
       attributed :id,
-                 :expense_category,
                  :receipt,
                  :invoice,
                  :notes,
@@ -20,7 +19,10 @@ module Harvesting
 
       modeled project: Project,
               user: User,
-              client: Client
+              client: Client,
+              expense_category: ExpenseCategories,
+              user_assignment: ProjectUserAssignment,
+              invoice: Invoice
 
       def path
         @attributes['id'].nil? ? "expenses" : "expenses/#{@attributes['id']}"
