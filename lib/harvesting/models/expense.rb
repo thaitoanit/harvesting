@@ -29,7 +29,7 @@ module Harvesting
       end
 
       def to_hash
-        { project_id: project.id, client_id: client.id, user_id: user.id }.merge(super)
+        { project_id: project.id, client_id: client.id, user_id: user.id, expense_category_id: expense_category&.id, user_assignment_id: user_assignment&.id, invoice_id: invoice&.id }.merge(super)
       end
     end
   end
