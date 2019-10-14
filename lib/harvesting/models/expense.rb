@@ -20,7 +20,7 @@ module Harvesting
       modeled project: Project,
               user: User,
               client: Client,
-              expense_category: ExpenseCategories,
+              expense_category: ExpenseCategory,
               user_assignment: ProjectUserAssignment,
               invoice: Invoice
 
