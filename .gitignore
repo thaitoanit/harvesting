@@ -1,0 +1,31 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+
+# environment variables
+.env
+.env.*
+!.env.sample
+
+
+# rspec failure tracking
+.rspec_status
+
+# byebug
+.byebug_history
+
+# rspec
+.rspec
+
+# ruby versions
+.ruby-version
+
+.idea/
+harvesting.iml
+
+.DS_Store

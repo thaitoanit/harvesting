@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+set -vx
+
+bundle install
+
+# Do any other automated setup that you need to do here
+
+if [ ! -f .env ]; then
+  cp .env.sample .env
+  echo "Make sure that .env has valid values."
+fi
