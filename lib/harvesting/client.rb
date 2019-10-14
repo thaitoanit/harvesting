@@ -55,6 +55,11 @@ module Harvesting
       end
     end
 
+    # @return [Harvesting::Models::Expenses]
+    def expenses(opts = {})
+      Harvesting::Models::Expenses.new(get("expenses", opts), opts, client: self)
+    end
+
     # @return [Harvesting::Models::TimeEntries]
     def time_entries(opts = {})
       Harvesting::Models::TimeEntries.new(get("time_entries", opts), opts, client: self)
