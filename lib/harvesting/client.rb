@@ -38,6 +38,11 @@ module Harvesting
       end
     end
 
+    # @return [Harvesting::Models::Company]
+    def company
+      Harvesting::Models::Company.new(get("company"), client: self)
+    end
+
     # @return [Array<Harvesting::Models::Contact>]
     def contacts
       get("contacts")["contacts"].map do |result|
