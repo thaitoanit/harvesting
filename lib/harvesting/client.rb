@@ -43,6 +43,13 @@ module Harvesting
       Harvesting::Models::Company.new(get("company"), client: self)
     end
 
+    # @return [Harvesting::Models::Company]
+    def roles
+      get("roles")["roles"].map do |result|
+        Harvesting::Models::Roles.new(result, client: self)
+      end
+    end
+
     # @return [Array<Harvesting::Models::Contact>]
     def contacts
       get("contacts")["contacts"].map do |result|
