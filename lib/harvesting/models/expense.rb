@@ -5,10 +5,7 @@ module Harvesting
     # For more information: https://help.getharvest.com/api-v2/expenses-api/expenses/expenses/
     class Expense < HarvestRecord
       attributed :id,
-                 :client,
-                 :project,
                  :expense_category,
-                 :user,
                  :receipt,
                  :invoice,
                  :notes,
@@ -20,8 +17,15 @@ module Harvesting
                  :spent_date,
                  :created_at,
                  :updated_at,
+      modeled project: Project,
+              user: User,
+              client: Client,
       def path
         @attributes['id'].nil? ? "expenses" : "expenses/#{@attributes['id']}"
+      end
+
+      def to_hash
+        { project_id: project.id, client_id: client.id, user_id: user.id }.merge(super)
       end
     end
   end
