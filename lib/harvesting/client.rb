@@ -60,6 +60,11 @@ module Harvesting
       Harvesting::Models::Expenses.new(get("expenses", opts), opts, client: self)
     end
 
+    # @return [Harvesting::Models::ExpenseCategories]
+    def expense_categories
+      Harvesting::Models::ExpenseCategories.new(get("expense_categories", opts), opts, client: self)
+    end
+
     # @return [Harvesting::Models::TimeEntries]
     def time_entries(opts = {})
       Harvesting::Models::TimeEntries.new(get("time_entries", opts), opts, client: self)
