@@ -61,7 +61,7 @@ module Harvesting
     end
 
     # @return [Harvesting::Models::ExpenseCategories]
-    def expense_categories
+    def expense_categories(opts = {})
       Harvesting::Models::ExpenseCategories.new(get("expense_categories", opts), opts, client: self)
     end
 
