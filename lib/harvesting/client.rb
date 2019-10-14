@@ -44,7 +44,7 @@ module Harvesting
     end
 
     # @return [Array<Harvesting::Models::Role>]
-    def roles
+    def roles(opts = {})
       Harvesting::Models::Roles.new(get("roles", opts), opts, client: self)
     end
 
