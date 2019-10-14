@@ -16,10 +16,12 @@ module Harvesting
                  :locked_reason,
                  :spent_date,
                  :created_at,
-                 :updated_at,
+                 :updated_at
+
       modeled project: Project,
               user: User,
-              client: Client,
+              client: Client
+
       def path
         @attributes['id'].nil? ? "expenses" : "expenses/#{@attributes['id']}"
       end
