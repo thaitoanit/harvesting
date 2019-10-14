@@ -4,6 +4,7 @@ module Harvesting
       attributed :id,
                  :is_active,
                  :is_project_manager,
+                 :use_default_rates,
                  :hourly_rate,
                  :budget,
                  :created_at,
