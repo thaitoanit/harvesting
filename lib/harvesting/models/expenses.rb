@@ -5,7 +5,7 @@ module Harvesting
       def initialize(attrs, query_opts = {}, opts = {})
         super(attrs.reject {|k,v| k == "expenses" }, query_opts, opts)
         @entries = attrs["expenses"].map do |entry|
-          Role.new(entry, client: opts[:client])
+          Expense.new(entry, client: opts[:client])
         end
       end
 
