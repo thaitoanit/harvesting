@@ -1,6 +1,6 @@
 module Harvesting
   module Models
-    # A client record from your Harvest account.
+    # A company record from your Harvest account.
     #
     # For more information: https://help.getharvest.com/api-v2/company-api/company/company/
     class Company < HarvestRecord
@@ -19,7 +19,7 @@ module Harvesting
                  :expense_feature,
                  :invoice_feature,
                  :estimate_feature,
-                 :approval_feature,
+                 :approval_feature
       def path
         "company"
       end
