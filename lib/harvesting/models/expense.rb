@@ -8,6 +8,8 @@ module Harvesting
                  :receipt,
                  :invoice,
                  :notes,
+                 :total_cost,
+                 :units,
                  :billable,
                  :is_closed,
                  :is_locked,
